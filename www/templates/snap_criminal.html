@@ -1,0 +1,49 @@
+<!-- Snap Criminal Page -->
+<ion-view class="bg-snap">
+    <ion-header-bar align-title="center" class="bar-assertive">
+        <div class="buttons">
+            <button ng-click="undo()" class="button icon ion-ios-undo"></button>
+        </div>
+        <h3 class="title">Snap Criminal </h3>
+        <div class="buttons">
+            <button class="button icon ion-android-menu"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content ng-controller="SnapCrimeCtrl">
+        <div class="container4">
+            <h3>Crime's Details</h3>
+        </div>
+        <div class="shake-rotate">
+            <!--               <img ng-click="takePicture()" class="camera-icon" src="img/camera-icon.png">-->
+            <!-- if has image  -->
+            <img class="camera-icon img-circle" ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+            <!-- if no image  -->
+            <img ng-click="takePicture()" class="camera-icon" ng-show="imgURI === undefined" ng-src="img/camera-icon.png">
+        </div>
+        <div ng-controller="formCtrl">
+            <div class="list snap-form">
+                <label class="item item-input">
+                    <input type="text" pick-a-date="date" placeholder="Date">
+                    <button class="button icon ion-calendar assertive"></button>
+                </label>
+                <label class="item item-input">
+                    <input type="text" pick-a-time="time" placeholder="Time">
+                    <button class="button icon ion-clock assertive"></button>
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="Crime Details">
+                    <button class="button icon ion-clipboard assertive"></button>
+                </label>
+                <br>
+                <p>Location of Incident (Auto Detect)</p>
+                <label class="item ">
+                    Latitude : {{latitude}}
+                    <br/>
+                    <br/> Longitude : {{longitude}}
+                    <br/>
+                </label>
+            </div>
+        </div>
+        <button class="submit-button button button-assertive">Submit</button>
+    </ion-content>
+</ion-view>

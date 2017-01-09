@@ -1,0 +1,38 @@
+
+
+
+<!-- Main Menu Page -->
+<ion-view cache-view="false" class="background" >
+    <!-- header -->
+    <ion-header-bar align-title="center" class="bar-assertive">
+        <div class="buttons">
+            <button  ui-sref="main" class="button icon ion-home"></button>
+        </div>      
+        <h3 class="title">Matching Criminals</h3>
+        <div class="buttons">
+            <button class="button icon ion-gear-a"></button>
+        </div>
+        <!-- -->
+    </ion-header-bar>
+    <ion-content   >
+        <div class="card finish">
+            <div class="item item-text-wrap">
+                Powered by Kairos Face Recognition Technology  </div>
+        </div>
+        <div id="twoimages">
+            <img class="logo morph" ng-src="{{image}}" alt="img" style="width:40%;height:55%;">
+            <img class="logo morph" ng-src="{{criminalPic}}"  alt="img" style="width:40%;height:55%;">
+        </div>
+
+        <div class="image-wrapper">
+            <p class="finish result">{{resultss}}</p>            
+            <img class=" finish " src="img/result.png" >
+        </div>
+ <p class="finish ratio">Percentage of Similarity</p>      
+                          <p class="finish result">{{percentage}}%</p>            
+        <button ng-click="finish()" class="button button-assertive finish">
+            Finish</button>
+
+    </ion-content>
+</ion-view>
+

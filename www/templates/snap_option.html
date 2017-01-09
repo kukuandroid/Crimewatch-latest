@@ -1,0 +1,34 @@
+<!-- Main Menu Page -->
+<ion-view cache-view="false"  >
+    <!-- header -->
+    <ion-header-bar align-title="center" class="bar-assertive">
+        <div class="buttons">
+            <button  ui-sref="main" class="button icon ion-ios-undo"></button>
+        </div>          
+      
+        <h3 class="title">Snap Option</h3>
+<div class="buttons">
+         <button class="button icon ion-more"></button>  
+      </div>
+    </ion-header-bar>
+    <ion-content  scroll="false" >
+
+        <!-- slidebox -->
+        <ion-slide-box>
+            <ion-slide>
+                <div class="first-screen">
+                    <img  ng-src="img/addCrim.jpg" ></div>
+                <button ui-sref="addCriminal" class="button button-assertive snapp animated infinite jello"> Add </button>     
+            </ion-slide>
+
+            <ion-slide>
+                <div class="second-screen">
+                    <img  ng-src="img/matchCrim.jpg" > </div>   
+                <button ui-sref="main" class="button button-assertive snapp animated infinite jello"> Match </button>     
+            </ion-slide>
+
+
+        </ion-slide-box> 
+
+    </ion-content>
+</ion-view>

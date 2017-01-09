@@ -1,0 +1,60 @@
+<!-- Criminal List Page -->
+<ion-view class="background" cache-view="false" >
+    <ion-header-bar align-title="center" class="bar-assertive">
+        <div class="buttons">
+            <button  ng-click="undo()" class="button icon ion-ios-undo"  ></button>
+        </div>
+        <h3 class="title">Criminal's List</h3>
+        <div class="buttons">
+            <button class="button icon ion-android-menu"></button>  
+        </div>
+    </ion-header-bar>
+    <ion-content header-shrink >
+        <!-- content goes here -->   
+        <!-- The criminal avatar will be linked to the firebase -->
+        <div>
+            <img class=" logo-content" src="img/logo_for_black.png">
+        </div>
+
+        <div class="list  box-space list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search Criminal's Name">
+            </label>
+        </div>
+
+        <div class="list box-space">
+            <label class = "item item-input item-select item-dark">
+                <div class = "input-label">
+                    Location
+                </div>
+
+                <select>
+                    <option selected>Perak</option>
+                    <option >Kedah</option>
+                    <option>Selangor</option>
+                    <option>Wilayah Persekutuan</option>
+                    <option>Perlis</option>
+                    <option>Johor</option>
+                    <option>Kelantan</option>
+                    <option>Terengganu</option>
+                    <option>Pulau  Pinang</option>      
+                    <option>Pahang</option>
+                    <option>Negeri Sembilan</option>
+                    <option>Melaka</option>
+                    <option>Sabah</option>
+                    <option>Sarawak</option>
+                </select>
+            </label>
+        </div>
+<!-- date,kes jenayah ++ -->
+        <div class="list" >  
+            <a class="item item-avatar" ng-click="show(crime.latitude,crime.longitude,crime.url,crime.fullname)"  ng-repeat="crime in criminals">
+                <img ng-src={{crime.url}}>
+                <h2>{{crime.fullname}}</h2>
+                <p>{{crime.location}}</p>
+                 <p class="case-align">Case:{{crime.case}}</p>   
+            </a>   
+        </div>
+    </ion-content>
+</ion-view>
