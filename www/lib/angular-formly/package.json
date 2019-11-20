@@ -54,7 +54,7 @@
     "api-check": "^7.0.0"
   },
   "devDependencies": {
-    "angular": "1.5.0",
+    "angular": "1.7.9",
     "angular-mocks": "1.5.0",
     "api-check": "7.5.5",
     "argv-set-env": "1.0.1",
