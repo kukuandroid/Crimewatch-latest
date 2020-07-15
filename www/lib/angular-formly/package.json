@@ -87,7 +87,7 @@
     "karma-sinon": "1.0.4",
     "karma-sinon-chai": "1.2.0",
     "karma-webpack": "1.7.0",
-    "lodash": "4.6.1",
+    "lodash": "4.17.19",
     "lolex": "1.4.0",
     "mocha": "2.4.5",
     "ng-annotate": "1.2.1",
